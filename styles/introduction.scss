@@ -1,0 +1,25 @@
+@import "fonts";
+@import "colors";
+
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #defaae;
+  min-height: 50vh;
+  //   box-shadow: 0px -14px 15px -13px rgba(254, 252, 252, 0.5);
+  box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.5);
+}
+.introduction-description {
+  font-size: 1.6em;
+  max-width: 60vw;
+  font-family: $fontTitilliumWeb;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: justify;
+  line-height: 1.4em;
+  border: 1px solid black;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  border-radius: 24px;
+  background-color: #fff;
+}
