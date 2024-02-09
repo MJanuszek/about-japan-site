@@ -8,10 +8,23 @@ import "../styles/introduction.scss";
 function Introduction() {
   useEffect(() => {
     function changeBackgroundColor() {
-      const bgColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+      const bgColor1 = `rgb(${Math.floor(
+        Math.random() * 256 + 100
+      )}, ${Math.floor(Math.random() * 256 + 150)}, ${Math.floor(
         Math.random() * 256
-      )}, ${Math.floor(Math.random() * 256)})`;
-      document.getElementById("randomColorDiv").style.backgroundColor = bgColor;
+      )})`;
+      const bgColor2 = `rgb(${Math.floor(
+        Math.random() * 256 + 100
+      )}, ${Math.floor(Math.random() * 256 + 150)}, ${Math.floor(
+        Math.random() * 256
+      )})`;
+      // apply color
+
+      document.getElementById(
+        "randomColorDiv"
+      ).style.backgroundImage = `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`;
+
+      // document.getElementById("randomColorDiv").style.backgroundColor = bgColor;
     }
 
     let colorChanged;
@@ -22,7 +35,7 @@ function Introduction() {
           clearInterval(colorChanged);
           if (entry.isIntersecting) {
             // start if in view::
-            colorChanged = setInterval(changeBackgroundColor, 3000);
+            colorChanged = setInterval(changeBackgroundColor, 2000);
             console.log("interval start");
           } else {
             console.log("cleared");
@@ -33,11 +46,13 @@ function Introduction() {
       { threshold: 0.1 }
     );
 
-    // observer.observe(document.getElementById("randomColorDiv"));
+    observer.observe(document.getElementById("randomColorDiv"));
   }, []);
   return (
-    <div className="introduction-section" id="randomColorDiv">
-      <h1 className="introduction-title section-title">Site for every otaku</h1>
+    <div className="introduction-section">
+      <h1 className="introduction-title section-title" id="randomColorDiv">
+        Site for every otaku
+      </h1>
       <p className="introduction-description">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
         ullam illum nesciunt expedita illo. Ipsum mollitia eligendi, sed sit

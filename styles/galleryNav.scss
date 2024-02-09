@@ -1,0 +1,16 @@
+@import "fonts";
+@import "colors";
+.gallery-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 15vh;
+  margin-left: 1vw;
+}
+
+.gallery-nav__link {
+  font-family: $fontGuerrilla;
+  padding: 20px;
+}
