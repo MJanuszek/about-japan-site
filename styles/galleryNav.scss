@@ -13,4 +13,8 @@
 .gallery-nav__link {
   font-family: $fontGuerrilla;
   padding: 20px;
+  font-size: 1.6em;
+  &:hover {
+    color: $accent-color05;
+  }
 }
