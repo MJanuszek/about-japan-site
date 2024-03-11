@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/discover.scss";
 
 function Discover() {
+  const [showPopupTxt, setPopupText] = useState("");
   return (
     <div className="discover-section">
       <h1 className="discover-title">Pick your discovery</h1>
@@ -10,6 +11,7 @@ function Discover() {
         <div className="discover-section__anime">Discover anime title</div>
         <div className="discover-section__city">Discover Japan City</div>
       </div>
+      {showPopupTxt && <div></div>}
     </div>
   );
 }

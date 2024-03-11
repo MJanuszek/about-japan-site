@@ -6,15 +6,12 @@ import GalleryNavigation from "./GalleryNavigation";
 import Footer from "./Footer";
 
 // -------------------------
-// Import wszystkich obrazów .jpg z folderu 'travel'
-// const imageModules = import.meta.globEager("./assets/travel-gallery/*.jpg");
-// Przekształć obiekty modułów na tablicę ścieżek obrazów
-// const images = Object.values(imageModules).map((mod) => mod.default);
-// ----------------------------
-// Przy użyciu import.meta.glob
+
+//  import.meta.glob
 const imageImports = import.meta.glob("./../assets/gallery-travel/*.jpg");
 // Funkcja do dynamicznego ładowania obrazów
 async function loadImages() {
+  console.log("imageIMP::", imageImports);
   const imageModules = await Promise.all(
     Object.entries(imageImports).map(async ([, importFn]) => {
       const mod = await importFn();
@@ -33,7 +30,7 @@ function Gallery() {
   useEffect(() => {
     loadImages().then(setImages);
   }, []);
-  console.log("state:", images);
+
   // -----------------------------------------------
   return (
     <div className="gallery-page">
