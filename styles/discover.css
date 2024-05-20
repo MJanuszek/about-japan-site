@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+.discover-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  box-shadow: 0px 10px 16px -6px #fe6f02;
+  background-image: linear-gradient(to right, rgba(247, 209, 73, 0.831), rgba(249, 173, 148, 0.906));
+}
+
+.discover-title {
+  font-family: "Protest Guerrilla", sans-serif;
+  margin-top: 10vh;
+}
+
+.discover {
+  margin-top: 15vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.discover-section__word,
+.discover-section__anime,
+.discover-section__city {
+  padding: 3%;
+  font-size: 32px;
+  color: white;
+  letter-spacing: 0.1em;
+  font-family: "Protest Guerrilla", sans-serif;
+  border-radius: 14px;
+}
+.discover-section__word:hover,
+.discover-section__anime:hover,
+.discover-section__city:hover {
+  background-color: #f9d356;
+}
+
+.discover-section__word {
+  border: 3px solid #4f1b2e;
+  background-color: #c04371;
+}
+
+.discover-section__anime {
+  border: 3px solid #b10f13;
+  background-color: #f2676a;
+}
+
+.discover-section__city {
+  border: 3px solid #651e38;
+  background-color: #cb517e;
+}/*# sourceMappingURL=discover.css.map */

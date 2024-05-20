@@ -1,11 +1,15 @@
 import React from "react";
+import "../styles/contact.scss";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 function Contact() {
   return (
-    <div className="contact-page">
+    <>
       <Navigation />
-    </div>
+      <div className="contact-page"></div>
+      <Footer />
+    </>
   );
 }
 
