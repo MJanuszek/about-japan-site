@@ -6,6 +6,7 @@ import Introduction from "./Introduction";
 import Discover from "./Discover";
 import Footer from "./Footer";
 import Quizz from "./Quizz";
+import Mythology from "./Mythology";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Introduction />
       <Discover />
       <Quizz />
+      <Mythology />
       <Footer />
     </div>
   );
