@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/contact.scss";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
-import emailjs from "emailjs-com";
 
 function Contact() {
   const [message, setMessage] = useState("");

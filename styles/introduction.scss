@@ -2,12 +2,14 @@
 @import "colors";
 
 .introduction-section {
+  height: auto;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+
   box-shadow: 0px 10px 16px -6px $accent-color02;
 }
 .introduction-description {
+  height: auto;
   font-size: 1.1em;
   width: 60vw;
   font-family: $fontTitilliumWeb;
