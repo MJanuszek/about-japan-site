@@ -1,7 +1,9 @@
+import "../styles/mythology.scss";
+
 function Mythology() {
   return (
     <div className="myths">
-      <h1 className="youkai">Mythology: Youkai</h1>
+      <h1 className="youkai-title">Mythology: Youkai</h1>
       <div className="yokai-description">
         Youkai are a captivating facet of Japanese folklore, embodying a range
         of supernatural creatures that populate countless stories and myths.
@@ -10,6 +12,7 @@ function Mythology() {
         from shape-shifting spirits like kitsune (foxes) and tanuki (raccoon
         dogs), to eerie beings like yurei (ghosts) and onryo (vengeful spirits),
         youkai permeate Japanese culture across literature, art, and media.
+        <br /> <br />
         Popularized in folklore collections and modern media, youkai continue to
         be a rich source of inspiration and cultural identity. They not only
         evoke fear and wonder but also convey moral lessons, embodying the
