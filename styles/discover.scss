@@ -10,8 +10,8 @@
   box-shadow: 0px 10px 16px -6px $accent-color05;
   background-image: linear-gradient(
     to right,
-    rgba(164, 228, 249, 0.831),
-    rgba(249, 184, 255, 0.906)
+    rgba(219, 246, 255, 0.831),
+    rgba(245, 215, 248, 0.906)
   );
 }
 .discover-title {
@@ -41,8 +41,9 @@
 }
 
 .discover-section__word {
+  color: black;
   border: 3px solid darken($sectionBgColor01, 30%);
-  background-color: $sectionBgColor01;
+  background-color: white;
 }
 
 .discover-section__anime {
