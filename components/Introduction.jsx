@@ -1,56 +1,62 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles/introduction.scss";
 
 //
 
 // -------------------COMPONENT-----------------
 function Introduction() {
+  const titleRef = useRef(null);
   useEffect(() => {
     function changeBackgroundColor() {
       const bgColor1 = `rgb(${Math.floor(
-        Math.random() * 256 + 100
-      )}, ${Math.floor(Math.random() * 256 + 150)}, ${Math.floor(
+        Math.random() * 156 + 100
+      )}, ${Math.floor(Math.random() * 106 + 150)}, ${Math.floor(
         Math.random() * 256
       )})`;
       const bgColor2 = `rgb(${Math.floor(
-        Math.random() * 256 + 100
-      )}, ${Math.floor(Math.random() * 256 + 150)}, ${Math.floor(
+        Math.random() * 156 + 100
+      )}, ${Math.floor(Math.random() * 106 + 150)}, ${Math.floor(
         Math.random() * 256
       )})`;
-      // apply color
 
-      document.getElementById(
-        "randomColorDiv"
-      ).style.backgroundImage = `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`;
-
-      // document.getElementById("randomColorDiv").style.backgroundColor = bgColor;
+      if (titleRef.current) {
+        titleRef.current.style.backgroundImage = `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`;
+      }
     }
 
     let colorChanged;
-    // observe element in view to change color:::
+
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
-          clearInterval(colorChanged);
           if (entry.isIntersecting) {
-            // start if in view::
+            clearInterval(colorChanged);
             colorChanged = setInterval(changeBackgroundColor, 2000);
             console.log("interval start");
           } else {
-            console.log("cleared");
             clearInterval(colorChanged);
+            console.log("cleared");
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    observer.observe(document.getElementById("randomColorDiv"));
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+
+    return () => {
+      clearInterval(colorChanged);
+      observer.disconnect();
+    };
   }, []);
+
+  // --------
   return (
     <div className="introduction-section">
-      <h1 className="introduction-title section-title" id="randomColorDiv">
+      <h1 ref={titleRef} className="introduction-title section-title">
         Site for every otaku
       </h1>
       <p className="introduction-description">

@@ -9,16 +9,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  justify-content: left;
+  align-items: center;
 }
 
 .header-title {
   display: flex;
-  align-self: center;
-  margin-top: -290px;
-  margin-left: 10vw;
+  margin-left: 7vw;
   color: white;
   font-family: $fontGuerrilla;
-  letter-spacing: 12px;
-  font-size: 8px;
+  letter-spacing: 0.2em;
+  font-size: 5em;
   text-shadow: 2px 2px 4px #000000;
 }
