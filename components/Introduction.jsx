@@ -6,6 +6,8 @@ import "../styles/introduction.scss";
 
 // -------------------COMPONENT-----------------
 function Introduction() {
+  const bgWrapperRef = useRef(null);
+  let currentLayer = 0;
   const titleRef = useRef(null);
   useEffect(() => {
     function changeBackgroundColor() {
@@ -20,9 +22,21 @@ function Introduction() {
         Math.random() * 256
       )})`;
 
-      if (titleRef.current) {
-        titleRef.current.style.backgroundImage = `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`;
-      }
+      const el = titleRef.current;
+      if (!el) return;
+
+      // Fade out ::before background
+      el.classList.add("fade-bg");
+
+      setTimeout(() => {
+        // Change the CSS variable used in ::before
+        el.style.setProperty(
+          "--bg-gradient",
+          `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`
+        );
+        // Fade back in
+        el.classList.remove("fade-bg");
+      }, 500); // This must match the SCSS transition duration
     }
 
     let colorChanged;
@@ -32,7 +46,7 @@ function Introduction() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             clearInterval(colorChanged);
-            colorChanged = setInterval(changeBackgroundColor, 2000);
+            colorChanged = setInterval(changeBackgroundColor, 4000);
             console.log("interval start");
           } else {
             clearInterval(colorChanged);
@@ -56,6 +70,10 @@ function Introduction() {
   // --------
   return (
     <div className="introduction-section">
+      <div className="bg-wrapper" ref={bgWrapperRef}>
+        <div className="bg-layer layer-1"></div>
+        <div className="bg-layer layer-2"></div>
+      </div>
       <h1 ref={titleRef} className="introduction-title section-title">
         Site for every otaku
       </h1>
