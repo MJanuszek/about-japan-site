@@ -32,7 +32,7 @@ function Introduction() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             clearInterval(colorChanged);
-            colorChanged = setInterval(changeBackgroundColor, 2000);
+            colorChanged = setInterval(changeBackgroundColor, 5000);
             console.log("interval start");
           } else {
             clearInterval(colorChanged);

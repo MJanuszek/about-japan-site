@@ -3,9 +3,10 @@
 
 .myths {
   height: auto;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
@@ -14,12 +15,13 @@
   text-align: center;
   border-radius: 10px;
   padding: 20px;
+  color: aliceblue;
 }
 
 .yokai-description {
   height: auto;
-  font-size: 1.1em;
-  width: 40%;
+  font-size: 1.2em;
+  width: 60%;
   font-family: $fontTitilliumWeb;
   margin: 0 auto;
   padding: 2em;
@@ -29,65 +31,44 @@
   margin-top: 3vh;
   margin-bottom: 7vh;
   border-radius: 24px;
-  background-color: #fff;
+  background-color: #ffffffb0;
 }
 .description-wrap {
   display: flex;
-}
-.youkai-pic {
-  background-image: url("/assets/gallery-youkai/oni.png");
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/gallery-youkai/20250606_1102_Japanese\ Youkai\ Encounter_simple_compose_01jx27hbweefmrpesyev7hgkmv.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
-  width: 40%;
-  margin-left: 2vw;
-  border-radius: 12px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.47);
+}
+// bottom gallery
+.gallery-main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
 .yokai-gallery {
+  width: 50vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-left: 3vw;
 }
 
 .yimg {
-  height: 40vh;
-  width: 30vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 3vh;
-  border-radius: 12px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.47);
-}
-
-.yokai-img1 {
-  background-image: url("/assets/gallery-youkai/Gashadokuro.jpg");
-}
-
-.yokai-img2 {
-  background-image: url("/assets/gallery-youkai/Kuzenbo_illustration_by_Hidetoshi.jpg");
-}
-
-.yokai-img3 {
-  background-image: url("/assets/gallery-youkai/Rokurokubi.jpg");
-}
-.yokai-img4 {
-  background-image: url("/assets/gallery-youkai/2010.1.45.jpg");
-}
-.yokai-img5 {
-  background-image: url("/assets/gallery-youkai/YOKAi.jpeg");
-}
-.yokai-img6 {
-  background-image: url("/assets/gallery-youkai/Gashadokuro.jpg");
-}
-
-.gallery-main {
-  width: 90vw;
+  flex: 1;
   display: flex;
-  justify-content: space-evenly;
-  border: 1px solid black;
-  padding: 20px;
-  margin-top: 5vh;
-  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.yimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: white;
 }

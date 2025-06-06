@@ -3,9 +3,8 @@ import "../styles/mythology.scss";
 function Mythology() {
   return (
     <div className="myths">
-      <h1 className="youkai-title">Mythology: Youkai</h1>
       <div className="description-wrap">
-        <div className="youkai-pic"></div>
+        <h1 className="youkai-title">Mythology: Youkai</h1>
         <div className="yokai-description">
           Youkai are a captivating facet of Japanese folklore, embodying a range
           of supernatural creatures that populate countless stories and myths.
@@ -27,14 +26,44 @@ function Mythology() {
       </div>
       <div className="gallery-main">
         <div className="yokai-gallery">
-          <div className="yokai-img1 yimg"></div>
-          <div className="yokai-img2 yimg"></div>
-          <div className="yokai-img3 yimg"></div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
         </div>
         <div className="yokai-gallery">
-          <div className="yokai-img4 yimg"></div>
-          <div className="yokai-img5 yimg"></div>
-          <div className="yokai-img6 yimg"></div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
+          <div className="yimg">
+            <img
+              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              alt="Gashadokuro"
+            />
+          </div>
         </div>
       </div>
     </div>
