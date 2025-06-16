@@ -8,20 +8,18 @@ import "../styles/introduction.scss";
 function Introduction() {
   const titleRef = useRef(null);
   useEffect(() => {
-    function changeBackgroundColor() {
-      const bgColor1 = `rgb(${Math.floor(
-        Math.random() * 156 + 100
-      )}, ${Math.floor(Math.random() * 106 + 150)}, ${Math.floor(
-        Math.random() * 256
-      )})`;
-      const bgColor2 = `rgb(${Math.floor(
-        Math.random() * 156 + 100
-      )}, ${Math.floor(Math.random() * 106 + 150)}, ${Math.floor(
-        Math.random() * 256
-      )})`;
+    function changeFontGradient() {
+      const generatePastel = () => {
+        const r = Math.floor(Math.random() * 100 + 155);
+        const g = Math.floor(Math.random() * 100 + 155);
+        const b = Math.floor(Math.random() * 100 + 155);
+        return `rgb(${r}, ${g}, ${b})`;
+      };
+
+      const gradient = `linear-gradient(to right, ${generatePastel()}, ${generatePastel()})`;
 
       if (titleRef.current) {
-        titleRef.current.style.backgroundImage = `linear-gradient(to bottom, ${bgColor1}, ${bgColor2})`;
+        titleRef.current.style.backgroundImage = gradient;
       }
     }
 
@@ -32,7 +30,7 @@ function Introduction() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             clearInterval(colorChanged);
-            colorChanged = setInterval(changeBackgroundColor, 5000);
+            colorChanged = setInterval(changeFontGradient, 4000);
             console.log("interval start");
           } else {
             clearInterval(colorChanged);
@@ -57,7 +55,7 @@ function Introduction() {
   return (
     <div className="introduction-section">
       <h1 ref={titleRef} className="introduction-title section-title">
-        Site for every otaku
+        Site for every Japan enthusiast
       </h1>
       <p className="introduction-description">
         Japan, an island nation in the Pacific Ocean, is a fascinating

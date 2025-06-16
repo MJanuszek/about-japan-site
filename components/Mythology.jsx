@@ -28,13 +28,13 @@ function Mythology() {
         <div className="yokai-gallery">
           <div className="yimg">
             <img
-              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              src="/assets/gallery-youkai/20250609_2146_Oni in Monochrome.png"
               alt="Gashadokuro"
             />
           </div>
           <div className="yimg">
             <img
-              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              src="/assets/gallery-youkai/20250606_1213_Youkai Creature Collage.png"
               alt="Gashadokuro"
             />
           </div>
@@ -54,13 +54,13 @@ function Mythology() {
           </div>
           <div className="yimg">
             <img
-              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              src="/assets/gallery-youkai/20250609_1616_Kitsune Folklore.png"
               alt="Gashadokuro"
             />
           </div>
           <div className="yimg">
             <img
-              src="/assets/gallery-youkai/Gashadokuro.jpg"
+              src="/assets/gallery-youkai/20250609_1545_Kappa Mythical Creature_Kappa.png"
               alt="Gashadokuro"
             />
           </div>

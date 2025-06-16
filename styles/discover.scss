@@ -5,18 +5,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  height: 90vh;
+  height: 100vh;
   box-shadow: 0px 10px 16px -6px $accent-color05;
-  background-image: linear-gradient(
-    to right,
-    rgba(219, 246, 255, 0.831),
-    rgba(245, 215, 248, 0.906)
-  );
+  border-top: 2px solid whitesmoke;
+  background-image: url("../assets/gallery-travel/20250609_1535_Detailed\ Chrysanthemums\ Design_remix_01jxaea888f4ttt3rk35p87yvf.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .discover-title {
   font-family: $fontGuerrilla;
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
 .discover {
   margin-top: 15vh;
@@ -26,32 +24,18 @@
   justify-content: space-around;
 }
 // ---
-.discover-section__word,
-.discover-section__anime,
-.discover-section__city {
-  padding: 3%;
-  font-size: 32px;
+.discover-section__word {
+  padding: 16px;
+  font-size: 1.4em;
   color: white;
   letter-spacing: 0.1em;
   font-family: $fontGuerrilla;
   border-radius: 14px;
+  border: 3px solid rgb(0, 128, 79);
+  background-color: rgba(48, 48, 48, 0.672);
   &:hover {
     background-color: darken($accent-color02, 10%);
+    cursor: pointer;
+    color: black;
   }
-}
-
-.discover-section__word {
-  color: black;
-  border: 3px solid darken($sectionBgColor01, 30%);
-  background-color: white;
-}
-
-.discover-section__anime {
-  border: 3px solid darken($sectionBgColor04, 30%);
-  background-color: $sectionBgColor04;
-}
-
-.discover-section__city {
-  border: 3px solid darken($sectionBgColor03, 30%);
-  background-color: $sectionBgColor03;
 }
