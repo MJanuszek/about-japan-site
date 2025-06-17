@@ -1,42 +1,24 @@
 import React, { useState } from "react";
 import "../styles/discover.scss";
+import japanFacts from "../components/factsJapan";
 
 function Discover() {
-  const [word, setWord] = useState("");
-  const [meaning, setMeaning] = useState("");
-  const [showPopupTxt, setPopupText] = useState(false);
+  const [fact, setFact] = useState("");
 
-  const getRandomWord = async () => {
-    const words = ["桜", "山", "海", "風", "心", "花", "夢", "道", "空"];
-    const randomWord = words[Math.floor(Math.random() * words.length)];
-
-    const res = await fetch(
-      `https://jisho.org/api/v1/search/words?keyword=${randomWord}`
-    );
-    const data = await res.json();
-
-    if (data.data.length > 0) {
-      const entry = data.data[0];
-      setWord(entry.japanese[0].word || entry.japanese[0].reading);
-      setMeaning(entry.senses[0].english_definitions.join(", "));
-      setPopupText(true);
-    }
+  const getRandom = () => {
+    const allFacts = Object.values(japanFacts).flat(); // combines all arrays
+    const randomIndex = Math.floor(Math.random() * allFacts.length);
+    setFact(allFacts[randomIndex]);
   };
 
   return (
     <div className="discover-section">
       <div className="discover">
-        <div className="discover-section__word" onClick={getRandomWord}>
-          Discover a Japanese word
+        <div className="discover-section__word" onClick={getRandom}>
+          Discover something about Japan
         </div>
+        {fact && <p className="discover-section__fact">{fact}</p>}
       </div>
-
-      {showPopupTxt && (
-        <div className="popup">
-          <h2>{word}</h2>
-          <p>{meaning}</p>
-        </div>
-      )}
     </div>
   );
 }

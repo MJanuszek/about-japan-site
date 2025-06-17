@@ -1,6 +1,14 @@
 @import "fonts";
 @import "colors";
 
+.discover {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 50vh;
+  background-color: rgba(212, 212, 212, 0.555);
+}
+
 .discover-section {
   display: flex;
   align-items: center;
@@ -27,15 +35,22 @@
 .discover-section__word {
   padding: 16px;
   font-size: 1.4em;
-  color: white;
+  color: rgb(161, 9, 9);
   letter-spacing: 0.1em;
   font-family: $fontGuerrilla;
   border-radius: 14px;
-  border: 3px solid rgb(0, 128, 79);
-  background-color: rgba(48, 48, 48, 0.672);
+  background-color: $accent-color02;
   &:hover {
-    background-color: darken($accent-color02, 10%);
+    background-color: darken($accent-color02, 13%);
     cursor: pointer;
     color: black;
   }
+}
+
+.discover-section__fact {
+  color: rgb(234, 240, 245);
+  font-size: 2em;
+  padding-top: 10vh;
+  font-family: $fontTitilliumWeb;
+  max-width: 50vw;
 }
